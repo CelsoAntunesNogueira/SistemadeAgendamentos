@@ -1,0 +1,30 @@
+# Backend - .NET
+backend/bin/
+backend/obj/
+backend/*.user
+backend/*.suo
+backend/.vs/
+backend/appsettings.Development.json
+
+# Frontend
+node_modules/
+frontend/dist/
+frontend/.env
+
+# Database
+*.sql.bak
+database/backups/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
