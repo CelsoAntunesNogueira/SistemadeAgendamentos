@@ -35,16 +35,14 @@ builder.Services.AddCors(options =>
 });
 var app = builder.Build();  // Constrói o aplicativo
 
-//Pipeline HTTP
-if (app.Environment.IsDevelopment()) // Verifica se o ambiente é de desenvolvimento
-{
+
     app.UseSwagger();               // Habilita o Swagger
     app.UseSwaggerUI(c =>           // Configura a interface do Swagger
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "SalaoAPI v1");
         c.RoutePrefix = string.Empty; 
     });
-}
+
 
 app.UseHttpsRedirection(); // Redireciona para HTTPS
 app.UseCors("AllowFrontend"); // Aplica a política CORS
